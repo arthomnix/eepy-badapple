@@ -1,0 +1,9 @@
+[package]
+name = "eepy-badapple"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eepy-sys = { git = "https://github.com/arthomnix/epd_firmware" }
+miniz_oxide = { version = "0.8", default-features = false }
+panic-halt = "1.0"
