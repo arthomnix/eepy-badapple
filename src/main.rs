@@ -37,7 +37,6 @@ static BAD_APPLE: &[u8] = include_bytes!("../badapple.bin");
 const BADAPPLE_FRAME_OFFSET: usize = 3540;
 
 const FRAME_TIME_MICROS: u64 = 566667;
-//const FRAME_TIME_MICROS: u64 = 1000000;
 
 #[cfg(feature = "timing-debug")]
 fn draw_timing_debug(current_time: u64, video_time: u64, prev_time: Option<NonZeroU64>, draw_target: &mut EpdDrawTarget) {
