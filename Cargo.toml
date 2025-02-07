@@ -5,5 +5,11 @@ edition = "2021"
 
 [dependencies]
 eepy-sys = { git = "https://github.com/arthomnix/epd_firmware" }
+eepy-gui = { git = "https://github.com/arthomnix/epd_firmware" }
+embedded-graphics = "0.8"
+heapless = "0.8"
 miniz_oxide = { version = "0.8", default-features = false }
 panic-halt = "1.0"
+
+[features]
+timing-debug = []

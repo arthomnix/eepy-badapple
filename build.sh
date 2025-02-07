@@ -6,7 +6,7 @@ mkdir out/bins
 
 for slot in `seq -f "%02g" 31`
 do
-  EPD_PROG_SLOT=$slot cargo build --release
+  EPD_PROG_SLOT=$slot cargo build $@
   elf2epb -i target/thumbv6m-none-eabi/release/eepy-badapple -o "out/bins/badapple.s$slot.epb"
 done
 
