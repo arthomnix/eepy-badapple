@@ -56,20 +56,22 @@ dependencies = [
 [[package]]
 name = "eepy-gui"
 version = "0.1.0"
-source = "git+https://github.com/arthomnix/epd_firmware#f8c04237c1307e64af6183c56d9cead837f0da2b"
+source = "git+https://github.com/arthomnix/epd_firmware#3cbe2e22fe15fb89c1986352f50a88d19e5baf7e"
 dependencies = [
  "eepy-sys",
  "embedded-graphics",
+ "fugit",
  "tp370pgh01",
 ]
 
 [[package]]
 name = "eepy-sys"
 version = "0.1.0"
-source = "git+https://github.com/arthomnix/epd_firmware#f8c04237c1307e64af6183c56d9cead837f0da2b"
+source = "git+https://github.com/arthomnix/epd_firmware#3cbe2e22fe15fb89c1986352f50a88d19e5baf7e"
 dependencies = [
  "crc32fast",
  "embedded-graphics",
+ "fugit",
  "serde",
  "strum",
  "tp370pgh01",
@@ -113,6 +115,21 @@ checksum = "98de4bbd547a563b716d8dfa9aad1cb19bfab00f4fa09a6a4ed21dbcf44ce9c4"
 dependencies = [
  "num-traits",
 ]
+
+[[package]]
+name = "fugit"
+version = "0.3.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "17186ad64927d5ac8f02c1e77ccefa08ccd9eaa314d5a4772278aa204a22f7e7"
+dependencies = [
+ "gcd",
+]
+
+[[package]]
+name = "gcd"
+version = "2.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1d758ba1b47b00caf47f24925c0074ecb20d6dfcffe7f6d53395c0465674841a"
 
 [[package]]
 name = "hash32"
@@ -172,7 +189,7 @@ checksum = "a513e167849a384b7f9b746e517604398518590a9142f4846a32e3c2a4de7b11"
 [[package]]
 name = "pervasive-spi"
 version = "0.1.1"
-source = "git+https://github.com/arthomnix/epd_firmware#f8c04237c1307e64af6183c56d9cead837f0da2b"
+source = "git+https://github.com/arthomnix/epd_firmware#3cbe2e22fe15fb89c1986352f50a88d19e5baf7e"
 dependencies = [
  "embedded-hal",
 ]
@@ -235,18 +252,18 @@ checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
 name = "strum"
-version = "0.26.3"
+version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8fec0f0aef304996cf250b31b5a10dee7980c85da9d759361292b8bca5a18f06"
+checksum = "ce1475c515a4f03a8a7129bb5228b81a781a86cb0b3fbbc19e1c556d491a401f"
 dependencies = [
  "strum_macros",
 ]
 
 [[package]]
 name = "strum_macros"
-version = "0.26.4"
+version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4c6bee85a5a24955dc440386795aa378cd9cf82acd5f764469152d2270e581be"
+checksum = "9688894b43459159c82bfa5a5fa0435c19cbe3c9b427fa1dd7b1ce0c279b18a7"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -269,7 +286,7 @@ dependencies = [
 [[package]]
 name = "tp370pgh01"
 version = "0.1.0"
-source = "git+https://github.com/arthomnix/epd_firmware#f8c04237c1307e64af6183c56d9cead837f0da2b"
+source = "git+https://github.com/arthomnix/epd_firmware#3cbe2e22fe15fb89c1986352f50a88d19e5baf7e"
 dependencies = [
  "embedded-hal",
  "pervasive-spi",

@@ -9,7 +9,6 @@ use core::num::NonZeroU64;
 use eepy_gui::draw_target::EpdDrawTarget;
 use eepy_gui::element::DEFAULT_TEXT_STYLE;
 use eepy_sys::header::ProgramSlotHeader;
-use eepy_sys::image::RefreshBlockMode;
 use eepy_sys::misc::get_time_micros;
 use embedded_graphics::prelude::*;
 use embedded_graphics::pixelcolor::BinaryColor;
@@ -100,7 +99,7 @@ extern "C" fn main() {
         draw_timing_debug(current_time, video_time, prev_time, &mut draw_target);
 
         // Display the frame
-        draw_target.refresh(true, RefreshBlockMode::BlockAcknowledge);
+        draw_target.refresh(true);
 
         #[cfg(feature = "timing-debug")]
         {
